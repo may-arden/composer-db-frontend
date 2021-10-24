@@ -1,10 +1,12 @@
+// will be container = data and methods regarding categories 
+
 import React from 'react'
 
-class Categories extends Component {
+class CategoriesContainer extends Component {
     render() {
         return (
             <div>
-            <h1>categories container here</h1>
+                categories container here
             </div>
         )
     } 
