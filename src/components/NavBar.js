@@ -1,7 +1,7 @@
 import React from 'react' 
 import { Navbar } from 'react-bootstrap'
 import { Nav } from 'react-bootstrap'
-import { NavDropDown } from 'react-bootstrap'
+import { NavDropdown } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 class NavBar extends React.Component {
