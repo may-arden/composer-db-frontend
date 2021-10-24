@@ -1,5 +1,11 @@
 import React from 'react'
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom'
 import CategoriesContainer from './containers/CategoriesContainer';
 import ComposerSubmissionContainer from './containers/ComposerSubmissionContainer';
 // import {
@@ -9,21 +15,34 @@ import ComposerSubmissionContainer from './containers/ComposerSubmissionContaine
 // import NavBar from './components/NavBar'
 // import Home from './components/Home'
 
-function App() {
-  return (
-    <div className="app">
-      <h1>Hello I am the body</h1>
-      <CategoriesContainer/> 
-      <ComposerSubmissionContainer/>
-      {/* <NavBar />
-
-      <Switch> 
-        <Route exact path='/' component={ Home } />
-        <Route exact path='/composers/new' component={ ComposerSubmissionContainer } />
-        <Route exact path='/categories' component={ CategoriesContainer } /> 
-      </Switch> */}
-    </div>
+export default class App extends React.Component {
+  render() {
+    return (
+      <Router>
+        <div>
+          <ul>
+            <ol>
+              <Link to='/'>home</Link>
+              <Link to='/composers/new'> composer submission </Link>            
+            </ol>
+          </ul>
+        </div>
+        <Switch>
+          <Route exact path='/'><home/></Route>
+          <Route exact path='/cases/new' component={ComposerSubmissionContainer} /> 
+        </Switch>
+      </Router>
   );
 }
+}
 
-export default App;
+// function Home() {
+//   return (
+//     <div>
+//       <h2>homepage</h2>
+//       < Categories Container /> 
+//     </div>
+//   )
+// }
+
+// export default App;
