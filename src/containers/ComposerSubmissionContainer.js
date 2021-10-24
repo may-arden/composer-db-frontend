@@ -1,4 +1,7 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { addComposer } from '../actions/composersActions'
+import { fetchCategories } from '../actions/categoriesActions'
 
 class ComposerSubmissionContainer extends React.Component {
     state = {
@@ -84,6 +87,8 @@ class ComposerSubmissionContainer extends React.Component {
                                 name="category" />
                                 modern 
                             </ol>
+                            <br/>
+                            <input type="submit" value="submit" /> 
                         </ul>
 
                     </form>
@@ -93,4 +98,4 @@ class ComposerSubmissionContainer extends React.Component {
     } 
 }
 
-export default ComposerSubmissionContainer;
+export default connect(null, { addComposer, fetchCategories })(ComposerSubmissionContainer); 
