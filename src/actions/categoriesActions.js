@@ -12,3 +12,4 @@ export const fetchCategories = () => {
             console.log('fetchCategories')
     }
 }
+

@@ -1,5 +1,7 @@
 import React from 'react'
 import './App.css';
+import CategoriesContainer from './containers/CategoriesContainer';
+import ComposerSubmissionContainer from './containers/ComposerSubmissionContainer';
 // import {
 //   Switch,
 //   Route
@@ -10,7 +12,9 @@ import './App.css';
 function App() {
   return (
     <div className="app">
-      Hello I am the body 
+      <h1>Hello I am the body</h1>
+      <CategoriesContainer/> 
+      <ComposerSubmissionContainer/>
       {/* <NavBar />
 
       <Switch> 
