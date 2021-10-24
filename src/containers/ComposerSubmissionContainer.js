@@ -60,31 +60,31 @@ class ComposerSubmissionContainer extends React.Component {
                         <label>category:</label>
                         <ul>
                             <ol><input type="radio"
-                                value="baroque"
+                                value="1"
                                 checked={this.state.category_id === "baroque"}
                                 onChange={this.handleChange}
-                                name="category" />
+                                name="category_id" />
                                 baroque
                             </ol>
                             <ol><input type="radio"
-                                value="classical"
+                                value="2"
                                 checked={this.state.category_id === "classical"}
                                 onChange={this.handleChange}
-                                name="category" />
+                                name="category_id" />
                                 classical
                             </ol>
                             <ol><input type="radio"
-                                value="romantic"
+                                value="3"
                                 checked={this.state.category_id === "romantic"}
                                 onChange={this.handleChange}
-                                name="category" />
+                                name="category_id" />
                                 romantic
                             </ol>
                             <ol><input type="radio"
-                                value="modern"
+                                value="4"
                                 checked={this.state.category_id === "modern"}
                                 onChange={this.handleChange}
-                                name="category" />
+                                name="category_id" />
                                 modern 
                             </ol>
                             <br/>
@@ -98,4 +98,4 @@ class ComposerSubmissionContainer extends React.Component {
     } 
 }
 
-export default connect(null, { addComposer, fetchCategories })(ComposerSubmissionContainer); 
+export default connect(null, { addComposer, fetchCategories })(ComposerSubmissionContainer);
