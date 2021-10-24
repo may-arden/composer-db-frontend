@@ -28,7 +28,7 @@ export default class App extends React.Component {
           </ul>
         </div>
         <Switch>
-          <Route exact path='/'><home/></Route>
+          <Route exact path='/'><Home/></Route>
           <Route exact path='/cases/new' component={ComposerSubmissionContainer} /> 
         </Switch>
       </Router>
@@ -36,13 +36,13 @@ export default class App extends React.Component {
 }
 }
 
-// function Home() {
-//   return (
-//     <div>
-//       <h2>homepage</h2>
-//       < Categories Container /> 
-//     </div>
-//   )
-// }
+function Home() {
+  return (
+    <div>
+      <h2>composer-db page title</h2>
+      < CategoriesContainer /> 
+    </div>
+  )
+}
 
 // export default App;
