@@ -12,14 +12,14 @@ export const addComposer = newComposer => {
     }
 }
 
-export const fetchComposers = async category_id => {
+export const fetchComposers = category_id => {
     return (dispatch) => {
         // fetch(`${baseURL}/categories/${category_id}/composers`)
         fetch(`http://127.0.0.1:3000/categories/${category_id}/composers`)
+        .catch((e => { console.log(e) }))
         .then(resp => resp.json())
         // console.log(resp)
         .then(composers => dispatch({type: 'FETCH_COMPOSERS', payload: composers}))
-        // console.log(composers)
     }
 }
 

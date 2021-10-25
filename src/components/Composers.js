@@ -4,14 +4,42 @@
 
 // // specific composer here 
 import React from 'react';
+import Composers from '../components/Composers'
 import { connect } from 'react-redux';
+import { fetchComposers } from '../actions/composersActions'
+import { Switch, Route } from 'react-router-dom'
+import SpecificComposer from '../components/composer'
 
-const Composers = () => {
-    return (
-        <div> 
-            here are specific composers
-        </div>
-    )
+class ComposersContainer extends React.Component {
+
+    componentDidMount() {
+        console.log(this.props.fetchComposers)
+        this.props.fetchComposers(this.props.category_id);
+    }
+
+    render() {
+        console.log(this.props.composers)
+        return(
+            <div classname='composer_container'>
+                <Switch>
+                    <Route exact path='/categories/:id/composers' component={(routeInfo) => {
+                    return <Composers routeInfo={routeInfo} category={this.props.category} composers={this.props.composers}/>
+                    }}/> 
+
+                    <Route exact path='/categories/:category_id/composers/:id' component={(routeInfo) => {
+                        const id = parseInt(routeInfo.match.params.id)
+                        const specComposer = this.props.composers.find(c => c.id === id)
+                    console.log(routeInfo)
+                    return !!specComposer ? <SpecificComposer routInfo={routeInfo} specComposer={specComposer}/> :
+                <div> Loading... </div>
+            }} /> 
+                </Switch>  
+            </div>
+        )
+    }
+
 }
 
-export default Composers; 
+
+
+export default connect(mapStateToProps, { fetchComposers })(ComposersContainer); 

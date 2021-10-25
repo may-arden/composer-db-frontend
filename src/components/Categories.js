@@ -14,7 +14,7 @@ const handleCatClick = () => {
 const Categories = ({ categories }) => {
     return (
         <div>
-            show categories
+           this is the categories component  
             {categories.map(category => 
                 <ul key={category.id}>
                     <ol> 

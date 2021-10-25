@@ -31,7 +31,7 @@ class ComposerSubmissionContainer extends React.Component {
         // {console.log(this.state)}
         return (
             <div>
-                <h2>composer submission form:</h2> 
+                <h2>this is the composer submission form container</h2> 
                     <form onSubmit={this.handleSubmit}>
                         <label>name:</label>
                         <input type="text" 
