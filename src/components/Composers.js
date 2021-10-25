@@ -3,15 +3,15 @@
 // mapStateToProps goes here 
 
 // // specific composer here 
-// import React from 'react';
-// import { connect } from 'react-redux';
+import React from 'react';
+import { connect } from 'react-redux';
 
-// const Composers {
-//     return (
-//         <div>
-//             <h1>show composers </h1>
-//         </div>
-//     )
-// }
+const Composers = () => {
+    return (
+        <div> 
+            here are specific composers
+        </div>
+    )
+}
 
-// export default Composers; 
+export default Composers; 
