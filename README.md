@@ -1,4 +1,4 @@
-github.com/may-arden/composer-db-backend
+https://github.com/may-arden/composer-db-backend
 
 
 
