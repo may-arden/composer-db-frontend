@@ -3,15 +3,19 @@ const baseURL = 'http://127.0.0.1:3000'
 
 export const fetchCategories = () => {
     return (dispatch) => {
+        // console.log("c")
         fetch(`${baseURL}/categories`, {
+            // .catch((e => { console.log(e) }))
             headers: {
                 'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': ','
+                'Access-Control-Allow-Origin': '*'
             }
         })
         .then(resp => resp.json())
-        console.log('fetchCategories')
+        
         .then(categories => { 
+            // .catch((e => { console.log(e) }))
+            // console.log(categories)
             dispatch({type: 'FETCH_CATEGORIES', payload: categories})
         }
         )

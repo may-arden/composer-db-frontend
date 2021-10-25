@@ -9,7 +9,7 @@ import Categories from '../components/Categories'
 class CategoriesContainer extends React.Component {
    
     componentDidMount() {
-        // console.log(this.props.fetchCategories)
+        console.log(this)
         // debugger
         // this.props.fetchCategories;
     }
@@ -17,11 +17,15 @@ class CategoriesContainer extends React.Component {
     render() {
         return (
             <div>
-                <h2>categories container here</h2> 
+                <h2>categories container here</h2>  
                 <Categories /> 
             </div>
         )
     } 
 }
 
-export default connect(null, { fetchCategories })(CategoriesContainer); 
+const mapStateToProps = state => {
+    return {categories: state.categories}
+}
+
+export default connect(mapStateToProps, { fetchCategories })(CategoriesContainer); 

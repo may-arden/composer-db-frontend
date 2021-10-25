@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom'
 import CategoriesContainer from './containers/CategoriesContainer';
 import ComposerSubmissionContainer from './containers/ComposerSubmissionContainer';
+import ComposersContainer from './containers/ComposersContainer';
 // import {
 //   Switch,
 //   Route
@@ -41,6 +42,7 @@ function Home() {
     <div>
       <h2>composer-db page title</h2>
       < CategoriesContainer /> 
+      < ComposersContainer /> 
     </div>
   )
 }
