@@ -1,7 +1,14 @@
 import React from 'react'
+import { connect } from 'react-redux';
 import Composers from "../components/Composers"
+import { fetchComposers } from "../actions/composersActions"
 
 class ComposersContainer extends React.Component {
+
+    componentDidMount() {
+        console.log(this.props.fetchComposers)
+        // this.props.fetchComposers; 
+    }
     render() {
         return (
             <div> 
@@ -12,4 +19,4 @@ class ComposersContainer extends React.Component {
     } 
 }
 
-export default ComposersContainer;
+export default connect(null, { fetchComposers })(ComposersContainer); 

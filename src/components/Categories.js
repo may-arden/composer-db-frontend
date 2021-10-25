@@ -9,6 +9,8 @@ const handleCatClick = () => {
     console.log("we've been clicked!")
 }
 
+// need to use a link with a button, instead of handleClick
+
 const Categories = ({ categories }) => {
     return (
         <div>

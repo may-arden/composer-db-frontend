@@ -16,7 +16,7 @@ export const fetchCategories = () => {
         .then(resp => resp.json())
         .then(categories => { 
             // .catch((e => { console.log(e) }))
-            console.log(categories)
+            // console.log(categories)
             dispatch({type: 'FETCH_CATEGORIES', payload: categories})
         }
         )
