@@ -2,7 +2,7 @@
 
 export const addComposer = newComposer => {
     return dispatch => {
-        fetch('http://127.0.0.1:3000/categories', {
+        fetch('http://127.0.0.1:3000/composers', {
             method: 'POST',
             body: JSON.stringify(newComposer),
             headers: { 'Content-Type': 'application/json' }

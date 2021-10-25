@@ -4,6 +4,7 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 const handleCatClick = () => {
     console.log("we've been clicked!")
@@ -13,22 +14,24 @@ const handleCatClick = () => {
 
 const Categories = ({ categories }) => {
     return (
-        <div>
+        <div className='categories' >
            this is the categories component  
             {categories.map(category => 
-                <ul key={category.id}>
-                    <ol> 
-                        <button onClick={handleCatClick}>{category.name}</button>
-                    </ol> 
-                </ul>
-            )} 
-        </div>
+                <div key={category.id}>
+                 <p>
+                     <Link to={`/categories/${category.id}/composers`}>
+                         <button>{category.name}</button>
+                     </Link>
+                 </p> 
+            
+                </div>)}
+        </div> 
     );
-}; 
+};  
 
-const mapStateToProps = state => {
+const mapStateToProps = stateFromStore => {
     // returns obj with property
-    return { categories: state.categories }
+    return { categories: stateFromStore.categories }
 }
 
 // want to grab state from tore to make a list 
