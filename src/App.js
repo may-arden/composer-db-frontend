@@ -30,7 +30,7 @@ export default class App extends React.Component {
         </div>
         <Switch>
           <Route exact path='/'><Home/></Route>
-          <Route exact path='/cases/new' component={ComposerSubmissionContainer} /> 
+          <Route exact path='/composers/new' component={ComposerSubmissionContainer} /> 
         </Switch>
       </Router>
   );
