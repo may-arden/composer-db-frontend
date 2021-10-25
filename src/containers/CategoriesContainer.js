@@ -4,14 +4,17 @@ import React from 'react'
 import { fetchCategories } from '../actions/categoriesActions'
 import { connect } from 'react-redux'
 import Categories from '../components/Categories'
+// import { Route, Switch } from 'react-router-dom';
 
 
 class CategoriesContainer extends React.Component {
    
     componentDidMount() {
-        console.log(this)
+        // console.log(this)
         // debugger
-        // this.props.fetchCategories;
+        // fetchCategories(this).then((result) => console.log(result) ) 
+        this.props.fetchCategories();
+       
     }
    
     render() {
