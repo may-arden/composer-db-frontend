@@ -25,12 +25,12 @@ export default class App extends React.Component {
             </ol>
           </ul>
         </div>
-        {/* <Switch>
+        <Switch>
           <Route exact path='/'><Home/></Route>
           <Route exact path='/composers/new' component={ComposerSubmissionContainer} /> 
           <Route exact path='/categories' component={CategoriesContainer} /> 
           <Route exact path='/categories/${category_id}/composers' component={ComposersContainer}/> 
-        </Switch> */}
+        </Switch>
       </Router>
   );
 }
@@ -41,8 +41,6 @@ function Home() {
     <div>
       <h2>welcome to composer-db</h2>
       <h4>a place to share information about classical composers</h4>
-      < CategoriesContainer /> 
-      < ComposersContainer /> 
     </div>
   )
 }

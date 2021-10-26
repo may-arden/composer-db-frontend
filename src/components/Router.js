@@ -8,7 +8,7 @@ import App from '../App';
 const Router = () => {
     return (
         <Switch>
-            <Route exact path='/'component={ App } />
+            <Route exact path='/' component={ App } />
         </Switch>
     )
 }
