@@ -3,7 +3,7 @@ import { Navbar } from 'react-bootstrap'
 import { Nav } from 'react-bootstrap'
 import { NavDropdown } from 'react-bootstrap'
 import { Form } from 'react-bootstrap'
-import { Button } from 'react-bootstrap'
+// import { Button } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { connect } from 'react-redux' 
 import CatDropdown from '../components/CatDropdown'
@@ -20,7 +20,7 @@ class NavBar extends React.Component {
                     <Nav.link href="/composers/new">composers submission</Nav.link>
                     <NavDropdown title="categories" id="basic-nav-dropdown">
                         <NavDropdown.Item href="/categories">all categories</NavDropdown.Item>
-                        <NavDropdown.Divier /> 
+                        <NavDropdown.Divider /> 
                         <CatDropdown categories={this.props.categories} />
                     </NavDropdown>
                     </Nav>

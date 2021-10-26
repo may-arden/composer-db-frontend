@@ -13,7 +13,7 @@ import SpecificComposer from '../components/Composer'
 class ComposersContainer extends React.Component {
 
     componentDidMount() {
-        console.log(this)
+        console.log(this.props.fetchComposers)
         this.props.fetchComposers(this.props.category_id);
     }
 

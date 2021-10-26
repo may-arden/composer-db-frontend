@@ -23,6 +23,17 @@ class ComposerSubmissionContainer extends React.Component {
         // action will make post fdetch to persist to db
         e.preventDefault();
         this.props.addComposer(this.state)
+        this.setState({
+            name: '',
+            description: '',
+            image_src: '',
+            category_id: ''
+        })
+    }
+
+    componentDidMount() {
+        console.log(this.props.fetchCategories)
+        this.props.fetchCategories();
     }
 
 

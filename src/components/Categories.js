@@ -6,9 +6,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-const handleCatClick = () => {
-    console.log("we've been clicked!")
-}
+// const handleCatClick = () => {
+//     console.log("we've been clicked!")
+// }
 
 // need to use a link with a button, instead of handleClick
 
@@ -27,6 +27,7 @@ const Categories = ({ categories }) => {
                 </div>)}
         </div> 
     );
+
 };  
 
 const mapStateToProps = stateFromStore => {
