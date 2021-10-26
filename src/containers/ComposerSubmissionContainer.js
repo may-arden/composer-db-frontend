@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { addComposer } from '../actions/composersActions'
 import { fetchCategories } from '../actions/categoriesActions'
 
+
 class ComposerSubmissionContainer extends React.Component {
     state = {
         name: '',
@@ -39,7 +40,7 @@ class ComposerSubmissionContainer extends React.Component {
 
 
     render() {
-        {console.log(this.state)}
+        // {console.log(this.state)}
         return (
             <div>
                 <h2>this is the composer submission form container</h2> 
@@ -99,6 +100,7 @@ class ComposerSubmissionContainer extends React.Component {
                                 modern 
                             </ol>
                             <br/>
+                            
                             <input type="submit" value="submit" /> 
                         </ul>
 

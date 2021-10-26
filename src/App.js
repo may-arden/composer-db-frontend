@@ -10,9 +10,9 @@ import CategoriesContainer from './containers/CategoriesContainer';
 import ComposerSubmissionContainer from './containers/ComposerSubmissionContainer';
 import ComposersContainer from './containers/ComposersContainer';
 // import Home from './components/Home'; 
-import NavBar from './components/NavBar'
-import { fetchCategories } from './actions/categoriesActions' 
-import { connect } from 'react-redux'; 
+// import NavBar from './components/NavBar'
+// import { fetchCategories } from './actions/categoriesActions' 
+// import { connect } from 'react-redux'; 
 // import Home from './components/Home'
 
 class App extends React.Component {
@@ -29,12 +29,12 @@ class App extends React.Component {
             </ol>
           </ul>
         </div>
-      <Switch>
-         <Route exact path='/'>< Home /></Route>  
-           <Route exact path='/composers/new' component={ComposerSubmissionContainer} /> 
-           <Route exact path='/categories' component={CategoriesContainer} /> 
-           <Route exact path='/categories/${category_id}/composers' component={ComposersContainer}/> 
-      </Switch>
+          <Switch>
+              <Route exact path='/'>< Home /></Route>  
+              <Route exact path='/composers/new' component={ComposerSubmissionContainer} /> 
+              <Route exact path='/categories' component={CategoriesContainer} /> 
+              <Route exact path='/categories/${category_id}/composers' component={ComposersContainer}/> 
+          </Switch>
       </Router> 
       )
       }

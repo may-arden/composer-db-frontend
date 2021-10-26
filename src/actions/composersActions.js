@@ -15,9 +15,9 @@ export const addComposer = newComposer => {
 export const fetchComposers = category_id => {
     return (dispatch) => {
         fetch(`${baseURL}/categories/${category_id}/composers`)
-        .catch((e => { console.log(e) }))
+        // .catch((e => { console.log(e) }))
         .then(resp => resp.json())
-        // console.log(resp)
+        console.log(dispatch)
         .then(composers => dispatch({type: 'FETCH_COMPOSERS', payload: composers}))
     }
 }
