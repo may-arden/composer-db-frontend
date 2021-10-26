@@ -39,7 +39,7 @@ class ComposerSubmissionContainer extends React.Component {
 
 
     render() {
-        // {console.log(this.state)}
+        {console.log(this.state)}
         return (
             <div>
                 <h2>this is the composer submission form container</h2> 
@@ -72,28 +72,28 @@ class ComposerSubmissionContainer extends React.Component {
                         <ul>
                             <ol><input type="radio"
                                 value="1"
-                                checked={this.state.category_id === "baroque"}
+                                checked={this.state.category_id === "1"}
                                 onChange={this.handleChange}
                                 name="category_id" />
                                 baroque
                             </ol>
                             <ol><input type="radio"
                                 value="2"
-                                checked={this.state.category_id === "classical"}
+                                checked={this.state.category_id === "2"}
                                 onChange={this.handleChange}
                                 name="category_id" />
                                 classical
                             </ol>
                             <ol><input type="radio"
                                 value="3"
-                                checked={this.state.category_id === "romantic"}
+                                checked={this.state.category_id === "3"}
                                 onChange={this.handleChange}
                                 name="category_id" />
                                 romantic
                             </ol>
                             <ol><input type="radio"
                                 value="4"
-                                checked={this.state.category_id === "modern"}
+                                checked={this.state.category_id === "4"}
                                 onChange={this.handleChange}
                                 name="category_id" />
                                 modern 
