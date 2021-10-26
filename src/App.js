@@ -9,7 +9,7 @@ import {
 import CategoriesContainer from './containers/CategoriesContainer';
 import ComposerSubmissionContainer from './containers/ComposerSubmissionContainer';
 import ComposersContainer from './containers/ComposersContainer';
-// import NavBar from './components/NavBar'
+import NavBar from './components/NavBar'
 // import Home from './components/Home'
 
 export default class App extends React.Component {

@@ -2,7 +2,11 @@ import React from 'react'
 import { Navbar } from 'react-bootstrap'
 import { Nav } from 'react-bootstrap'
 import { NavDropdown } from 'react-bootstrap'
+import { Form } from 'react-bootstrap'
+import { Button } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { connect } from 'react-redux' 
+import CatDropdown from '../components/CatDropdown'
 
 class NavBar extends React.Component {
     render() {
@@ -26,4 +30,8 @@ class NavBar extends React.Component {
     }
 }
 
-export default NavBar;
+const mapStateToProps = stateFromStore => {
+    return {categories: stateFromStore.categories}
+}
+
+export default connect(mapStateToProps)(NavBar);

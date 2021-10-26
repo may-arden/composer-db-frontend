@@ -2,7 +2,12 @@ import {NavDropdown} from 'react-bootstrap'
 
 const CatDropdown = (props) => {
     return (
-        <h2>category name</h2>
+        <>
+        {props.categories.map(category => {
+            debugger
+            return <NavDropdown.Item key={category.id} href={`/categories/${category.id}/composers`}>{category.name}</NavDropdown.Item>
+        })}
+        </> 
     )
 }
 
