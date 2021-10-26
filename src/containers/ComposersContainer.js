@@ -13,7 +13,7 @@ import SpecificComposer from '../components/Composer'
 class ComposersContainer extends React.Component {
 
     componentDidMount() {
-        console.log(this.props.fetchComposers)
+        console.log(this)
         this.props.fetchComposers(this.props.category_id);
     }
 
@@ -32,7 +32,7 @@ class ComposersContainer extends React.Component {
                         const id = parseInt(routeInfo.match.params.id)
                         const specComposer = this.props.composers.find(c => c.id === id)
                     console.log(routeInfo)
-                    return !!specComposer ? <SpecificComposer routInfo={routeInfo} specComposer={specComposer}/> :
+                    return !!specComposer ? <SpecificComposer routeInfo={routeInfo} specComposer={specComposer}/> :
                 <div> Loading... </div>
             }} /> 
                 </Switch>  
