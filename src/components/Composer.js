@@ -1,13 +1,17 @@
 import React from 'react'
+import ComposerImage from './ComposerImage'
+
 
 const SpecificComposer = ({specComposer}) => {
     // debugger
     console.log(specComposer)
     return (
-        <div>  specific composer component 
-        {/* // className='spec_composer'>
-        //     <h1>{specComposer.name}</h1>
-        //     <h3>{specComposer.description}</h3> */}
+        <div 
+        className='spec_composer'>
+            specific composer component 
+         <h1>{specComposer.name}</h1>
+         <ComposerImage name={specComposer.name} image={specComposer.image_src}/> 
+       <h3>{specComposer.description}</h3>
         </div>
     )
 }
