@@ -4,9 +4,10 @@ const CatDropdown = (props) => {
     return (
         <>
         {props.categories.map(category => {
-            debugger
+            // debugger
             return <NavDropdown.Item key={category.id} href={`/categories/${category.id}/composers`}>{category.name}</NavDropdown.Item>
-        })}
+        }
+            )}
         </> 
     )
 }

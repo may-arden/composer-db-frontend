@@ -20,7 +20,7 @@ class CategoriesContainer extends React.Component {
     render() {
         return (
             <div>
-                <h2>this is the categories container </h2>  
+                <h5>choose a category</h5>  
                 <Categories /> 
             </div>
         )

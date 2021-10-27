@@ -14,8 +14,7 @@ import { Link } from 'react-router-dom';
 
 const Categories = ({ categories }) => {
     return (
-        <div className='categories' >
-           this is the categories component  
+        <div className='categories' > 
             {categories.map(category => 
                 <div key={category.id}>
                  <p>

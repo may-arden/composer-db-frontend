@@ -2,11 +2,11 @@ import React from 'react'
 import { Navbar } from 'react-bootstrap'
 import { Nav } from 'react-bootstrap'
 import { NavDropdown } from 'react-bootstrap'
-import { Form } from 'react-bootstrap'
 // import { Button } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { connect } from 'react-redux' 
 import CatDropdown from '../components/CatDropdown'
+import { connect } from 'react-redux' 
+
 
 class NavBar extends React.Component {
     render() {
@@ -17,13 +17,13 @@ class NavBar extends React.Component {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav" >
                 <Nav className="mr-auto">
-                    <Nav.link href="/composers/new">composers submission</Nav.link>
+                  <Nav.Link href="/composers/new">composers submission</Nav.Link>
                     <NavDropdown title="categories" id="basic-nav-dropdown">
                         <NavDropdown.Item href="/categories">all categories</NavDropdown.Item>
                         <NavDropdown.Divider /> 
                         <CatDropdown categories={this.props.categories} />
                     </NavDropdown>
-                    </Nav>
+                </Nav>
             </Navbar.Collapse> 
             </Navbar> 
         )

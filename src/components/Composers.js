@@ -7,7 +7,7 @@ import { useState } from 'react'
 const Composers = ({ composers }) => {
     return (
         <div className='cat_composers'>
-          <h3> composers container - Select a composer to read more about them. </h3>
+          <h4> choose a composer </h4>
             
              
             {composers.map(indivComposer => <div key={indivComposer.id}>
