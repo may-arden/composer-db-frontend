@@ -14,6 +14,7 @@ const Composers = ({ composers }) => {
                 <br/> 
                   <p>
                     <Link to={`/categories/${indivComposer.category_id}/composers/${indivComposer.id}`}>
+                        
                         <button>{indivComposer.name}</button>
                     </Link>
                   </p> 
@@ -23,6 +24,7 @@ const Composers = ({ composers }) => {
 }
 
 const mapStateToProps =  state => {
+  // debugger 
     return { composers: state.composers}
 }
 

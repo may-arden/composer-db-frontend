@@ -19,7 +19,7 @@ class ComposersContainer extends React.Component {
 
     render() {
         console.log(this.props.composers)
-        debugger
+        // debugger
         return(
     
             <div className='composer_container'>
@@ -33,9 +33,9 @@ class ComposersContainer extends React.Component {
                         const id = parseInt(routeInfo.match.params.id)
                         const specComposer = this.props.composers.find(c => c.id === id)
                          
-                        return !!specComposer ? <SpecificComposer routeInfo={routeInfo} specComposer={specComposer}/> : <p>Loading...</p>
-                        // return this.props.composers.length > 0 ? <SpecificComposer routeInfo={routeInfo} specComposer={specComposer}/> : <p>Loading...</p>
-                  debugger
+                        // return !!specComposer ? <SpecificComposer routeInfo={routeInfo} specComposer={specComposer}/> : <p>Loading...</p>
+                        return this.props.composers.length > 0 ? <SpecificComposer routeInfo={routeInfo} specComposer={specComposer}/> : <p>Loading...</p>
+                //   debugger
                     }} /> 
                 </Switch>  
             </div>
