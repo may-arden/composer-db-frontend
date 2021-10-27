@@ -3,8 +3,8 @@ import ComposerImage from './ComposerImage'
 
 
 const SpecificComposer = ({specComposer}) => {
-    // debugger
-    console.log(specComposer)
+    debugger
+    
     return (
         <div 
         className='spec_composer'>

@@ -19,7 +19,7 @@ export const fetchCategories = () => {
             // console.log(categories)
             dispatch({type: 'FETCH_CATEGORIES', payload: categories})
         }
-        )
+        ).catch(console.error)
     }
     
 }

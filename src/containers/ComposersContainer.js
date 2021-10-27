@@ -13,28 +13,30 @@ import SpecificComposer from '../components/Composer'
 class ComposersContainer extends React.Component {
 
     componentDidMount() {
-        console.log(this.props.fetchComposers)
-        this.props.fetchComposers(this.props.category_id);
+        //console.log(this.props.fetchComposers)
+        this.props.fetchComposers(this.props.match.params.category_id);
     }
 
     render() {
         console.log(this.props.composers)
+        debugger
         return(
-            <div classname='composer_container'>
-                <h2> composers container </h2>
-                
+    
+            <div className='composer_container'>
                 <Switch>
-                    <Route exact path='/categories/:id/composers' component={(routeInfo) => {
-                    return <Composers routeInfo={routeInfo} category={this.props.category} composers={this.props.composers}/>
+                    <Route exact path='/categories/:category_id/composers' component={(routeInfo) => {
+                        return this.props.composers.length > 0 ? <Composers routeInfo={routeInfo} composers={this.props.composers}/> : <p>Loading...</p>
                     }}/> 
 
                     <Route exact path='/categories/:category_id/composers/:id' component={(routeInfo) => {
+                        debugger 
                         const id = parseInt(routeInfo.match.params.id)
                         const specComposer = this.props.composers.find(c => c.id === id)
-                    console.log(routeInfo)
-                    return !!specComposer ? <SpecificComposer routeInfo={routeInfo} specComposer={specComposer}/> :
-                <div> Loading... </div>
-            }} /> 
+                         
+                        return !!specComposer ? <SpecificComposer routeInfo={routeInfo} specComposer={specComposer}/> : <p>Loading...</p>
+                        // return this.props.composers.length > 0 ? <SpecificComposer routeInfo={routeInfo} specComposer={specComposer}/> : <p>Loading...</p>
+                  debugger
+                    }} /> 
                 </Switch>  
             </div>
         )
