@@ -15,8 +15,9 @@ const Composers = ({ composers }) => {
                   <p>
                     <Link to={`/categories/${indivComposer.category_id}/composers/${indivComposer.id}`}>
                         
-                        <button>{indivComposer.name}</button>
+                        <button>{indivComposer.name}</button> 
                     </Link>
+                    <button>  upvotes</button>
                   </p> 
                 </div>)}
         </div>    
@@ -26,6 +27,10 @@ const Composers = ({ composers }) => {
 const mapStateToProps =  state => {
   // debugger 
     return { composers: state.composers}
+}
+
+const handleClick = () => {
+    console.log("we've been clicked!")
 }
 
 export default connect(mapStateToProps)(Composers); 

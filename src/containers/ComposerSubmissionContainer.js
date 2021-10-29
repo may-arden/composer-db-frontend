@@ -5,7 +5,6 @@ import { fetchCategories } from '../actions/categoriesActions'
 import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'; 
 
-
 class ComposerSubmissionContainer extends React.Component {
     state = {
         name: '',

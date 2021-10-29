@@ -52,3 +52,9 @@ const mapStateToProps = state => {
 
 
 export default connect(mapStateToProps, { fetchComposers })(ComposersContainer); 
+
+
+// next to each componser on http://localhost:3001/categories/1/composers
+// have a button next to each composer that says X Upvotes (where x is a number starting at 0)
+
+// don't use redux or persist to the database - just local react state
