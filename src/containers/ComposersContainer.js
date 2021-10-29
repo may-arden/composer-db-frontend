@@ -32,6 +32,7 @@ class ComposersContainer extends React.Component {
                         // debugger 
                         const id = parseInt(routeInfo.match.params.id)
                         const specComposer = this.props.composers.find(c => c.id === id)
+                        // debugger 
                         console.log(routeInfo)  
                         return !!specComposer ? <SpecificComposer routeInfo={routeInfo} specComposer={specComposer}/> : <p>Loading...</p>
                         // return this.props.composers.length > 0 ? <SpecificComposer routeInfo={routeInfo} specComposer={specComposer}/> : <p>Loading...</p>

@@ -13,7 +13,7 @@ class NavBar extends React.Component {
         return (
 
             <Navbar bg="dark" variant="dark" expand="lg">
-            <Navbar.Brand href="/">composer-db</Navbar.Brand>
+            <Navbar.Brand href="/">composer wiki</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav" >
                 <Nav className="mr-auto">
@@ -30,8 +30,8 @@ class NavBar extends React.Component {
     }
 }
 
-const mapStateToProps = stateFromStore => {
-    return {categories: stateFromStore.categories}
+const mapStateToProps = state => {
+    return {categories: state.categories}
 }
 
 export default connect(mapStateToProps)(NavBar);

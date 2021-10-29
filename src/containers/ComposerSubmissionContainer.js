@@ -2,6 +2,8 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { addComposer } from '../actions/composersActions'
 import { fetchCategories } from '../actions/categoriesActions'
+import Popup from 'reactjs-popup'
+import 'reactjs-popup/dist/index.css'; 
 
 
 class ComposerSubmissionContainer extends React.Component {
@@ -21,7 +23,7 @@ class ComposerSubmissionContainer extends React.Component {
 
     handleSubmit = e => {
         // will call action that will dispatch new obj to reducer to update store state
-        // action will make post fdetch to persist to db
+        // action will make post fetch to persist to database
         e.preventDefault();
         this.props.addComposer(this.state)
         this.setState({
@@ -101,7 +103,10 @@ class ComposerSubmissionContainer extends React.Component {
                             </ol>
                             <br/>
                             
-                            <input type="submit" value="submit" /> 
+                            {/* <input type="submit" value="submit" />  */}
+                            <Popup trigger={<input type="submit" value="submit composer" />} position="right center">
+                                <div>your composer was submitted</div>
+                            </Popup>
                         </ul>
 
                     </form>

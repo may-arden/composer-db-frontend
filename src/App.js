@@ -14,6 +14,7 @@ import NavBar from './components/NavBar'
 // import { fetchCategories } from './actions/categoriesActions' 
 import { connect } from 'react-redux'; 
 // import Home from './components/Home'
+import SpecificComposer from './components/Composer'
 
 class App extends React.Component {
   
@@ -35,7 +36,7 @@ class App extends React.Component {
               <Route exact path='/composers/new' component={ComposerSubmissionContainer} /> 
               <Route exact path='/categories' component={CategoriesContainer} /> 
               <Route exact path='/categories/:category_id/composers' component={ComposersContainer}/> 
-              {/* <Route exact path='/categories/:category_id/composers/:id' component={SpecificComposer}/>  */}
+              <Route exact path='/categories/:category_id/composers/:id' component={ComposersContainer}/> 
           </Switch>
       {/* </Router>  */}
       </div>
