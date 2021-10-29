@@ -9,6 +9,7 @@ import { connect } from 'react-redux';
 import { fetchComposers } from '../actions/composersActions'
 import { Switch, Route } from 'react-router-dom'
 import SpecificComposer from '../components/Composer'
+// import Counter from '../components/counter.js'
 
 class ComposersContainer extends React.Component {
 
@@ -26,6 +27,7 @@ class ComposersContainer extends React.Component {
                 <Switch>
                     <Route exact path='/categories/:category_id/composers' component={(routeInfo) => {
                         return this.props.composers.length > 0 ? <Composers routeInfo={routeInfo} composers={this.props.composers}/> : <p>Loading...</p>
+                     
                     }}/> 
 
                     <Route exact path='/categories/:category_id/composers/:id' component={(routeInfo) => {

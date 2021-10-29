@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ComposerImage = ({name, image}) => {
-    debugger 
+    // debugger 
     return(
         
 
