@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 // import { useState } from 'react-hook-use-state';
 // import React, { useState } from 'react'; 
-import Counter from './Counter'
+import HookCounter from './HookCounter'
 
 
 // a function "Composers" 
@@ -23,7 +23,7 @@ const Composers = ({ composers }) => {
                         <button>{composer.name}</button> 
                     </Link>
                     {/* <button onClick={handleClick}> (this many) upvotes </button> */}
-                    <Counter /> 
+                    <HookCounter /> 
                   </p> 
             </div>)}
         </div>    

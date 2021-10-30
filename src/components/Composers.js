@@ -5,6 +5,8 @@ import React from 'react';
 import { render } from 'react-dom';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+// import HookCounter from './HookCounter';
+import Counter from './Counter'; 
 
 
 
@@ -36,6 +38,9 @@ class Composers extends React.Component {
                           <Link to={`/categories/${composer.category_id}/composers/${composer.id}`}>
                               <button>{composer.name}</button>
                           </Link>
+                          {/* <button onClick={handleClick}> (this many) upvotes </button> */}
+                          {/* <HookCounter/> */}
+                          <Counter /> 
                         </p>
                     </div>)}
             </div>
