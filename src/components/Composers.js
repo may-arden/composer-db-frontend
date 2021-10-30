@@ -7,24 +7,25 @@ import { Link } from 'react-router-dom';
 import Counter from './Counter'
 
 
-   
+// a function "Composers" 
+// composers = bach, handel, lully, vivaldi, test
 const Composers = ({ composers }) => {
-   return (
+  // debugger 
+  
+   return (  
         <div className='cat_composers'>
           <h4> choose a composer </h4>
-            
-             
-            {composers.map(indivComposer => <div key={indivComposer.id}>
+            {composers.map(composer => 
+              <div key={composer.id}>
                 <br/> 
                   <p>
-                    <Link to={`/categories/${indivComposer.category_id}/composers/${indivComposer.id}`}>
-                        
-                        <button>{indivComposer.name}</button> 
+                    <Link to={`/categories/${composer.category_id}/composers/${composer.id}`}>
+                        <button>{composer.name}</button> 
                     </Link>
                     {/* <button onClick={handleClick}> (this many) upvotes </button> */}
                     <Counter /> 
                   </p> 
-                </div>)}
+            </div>)}
         </div>    
     )
 }

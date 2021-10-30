@@ -11,6 +11,7 @@ class ComposerSubmissionContainer extends React.Component {
         description: '',
         image_src: '',
         category_id: '' 
+        
     }
 
     handleChange = e => {
@@ -25,6 +26,7 @@ class ComposerSubmissionContainer extends React.Component {
         // action will make post fetch to persist to database
         e.preventDefault();
         this.props.addComposer(this.state)
+         
         this.setState({
             name: '',
             description: '',

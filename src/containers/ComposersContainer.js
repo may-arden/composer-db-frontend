@@ -10,12 +10,15 @@ import { fetchComposers } from '../actions/composersActions'
 import { Switch, Route } from 'react-router-dom'
 import SpecificComposer from '../components/Composer'
 // import Counter from '../components/counter.js'
+import ComposersClass from '../components/ComposersClass'
 
 class ComposersContainer extends React.Component {
 
     componentDidMount() {
         //console.log(this.props.fetchComposers)
+        // debugger 
         this.props.fetchComposers(this.props.match.params.category_id);
+        // debugger 
     }
 
     render() {
@@ -26,8 +29,8 @@ class ComposersContainer extends React.Component {
             <div className='composer_container'>
                 <Switch>
                     <Route exact path='/categories/:category_id/composers' component={(routeInfo) => {
-                        return this.props.composers.length > 0 ? <Composers routeInfo={routeInfo} composers={this.props.composers}/> : <p>Loading...</p>
-                     
+                        // return this.props.composers.length > 0 ? <Composers routeInfo={routeInfo} composers={this.props.composers}/> : <p>Loading...</p>
+                     return this.props.composers.length > 0 ? <ComposersClass routeInfo={routeInfo} composers={this.props.composers}/> : <p>Loading...</p>
                     }}/> 
 
                     <Route exact path='/categories/:category_id/composers/:id' component={(routeInfo) => {

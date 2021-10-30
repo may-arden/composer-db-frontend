@@ -14,6 +14,7 @@ class CategoriesContainer extends React.Component {
         // debugger
         // fetchCategories(this).then((result) => console.log(result) ) 
         this.props.fetchCategories();
+        // debugger
        
     }
    
@@ -22,6 +23,7 @@ class CategoriesContainer extends React.Component {
             <div>
                 <h5>choose a category</h5>  
                 <Categories /> 
+                
             </div>
         )
     } 
