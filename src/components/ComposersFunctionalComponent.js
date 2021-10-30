@@ -1,5 +1,4 @@
 import React from 'react';
-import { render } from 'react-dom';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 // import { useState } from 'react-hook-use-state';
@@ -9,7 +8,7 @@ import HookCounter from './HookCounter'
 
 // a function "Composers" 
 // composers = bach, handel, lully, vivaldi, test
-const Composers = ({ composers }) => {
+const ComposersFunctionalComponent = ({ composers }) => {
   // debugger 
   
    return (  
@@ -74,4 +73,4 @@ const handleClick = () => {
 {/* <input type="number" className="upvote" onChange={event => increaseValue(event.target.value)} value={value}/>
 <button onClick={increaseVote}> upvote </button> */}
 
-// export default connect(mapStateToProps)(ComposersFunctionalComponent); 
+export default connect(mapStateToProps)(ComposersFunctionalComponent); 

@@ -9,7 +9,7 @@ const SpecificComposer = ({specComposer}) => {
         <div 
         className='spec_composer'>
             <h1>{specComposer.name}</h1> 
-            <ComposerImage image={specComposer.image_src} name={specComposer.name}/> 
+            <ComposerImage image={specComposer.image_src} name={specComposer.name}/>  
             <h3>{specComposer.description}</h3>
         </div>
     )
