@@ -4,13 +4,13 @@
 
 // // specific composer here 
 import React from 'react';
-import Composers from '../components/Composers'
+// import ComposersFunctionalComponent from '../components/ComposersFunctionalComponent'
 import { connect } from 'react-redux';
 import { fetchComposers } from '../actions/composersActions'
 import { Switch, Route } from 'react-router-dom'
 import SpecificComposer from '../components/Composer'
 // import Counter from '../components/counter.js'
-import ComposersClass from '../components/ComposersClass'
+import Composers from '../components/Composers'
 
 class ComposersContainer extends React.Component {
 
@@ -29,8 +29,8 @@ class ComposersContainer extends React.Component {
             <div className='composer_container'>
                 <Switch>
                     <Route exact path='/categories/:category_id/composers' component={(routeInfo) => {
-                        // return this.props.composers.length > 0 ? <Composers routeInfo={routeInfo} composers={this.props.composers}/> : <p>Loading...</p>
-                     return this.props.composers.length > 0 ? <ComposersClass routeInfo={routeInfo} composers={this.props.composers}/> : <p>Loading...</p>
+                        // return this.props.composers.length > 0 ? <ComposersFunctionalComponent routeInfo={routeInfo} composers={this.props.composers}/> : <p>Loading...</p>
+                     return this.props.composers.length > 0 ? <Composers routeInfo={routeInfo} composers={this.props.composers}/> : <p>Loading...</p>
                     }}/> 
 
                     <Route exact path='/categories/:category_id/composers/:id' component={(routeInfo) => {
